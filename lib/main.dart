@@ -43,6 +43,8 @@ Widget _buildBody() {
         _textFieldCityDetail(),
         _textFieldTemperatureDetail(),
         _textFieldExtraWeatherDetail(),
+        _horizontalListViewName(),
+        _horizontalListView(),
       ]),
     )
   ]);
@@ -141,8 +143,10 @@ Column _textFieldTemperatureDetail() {
   );
 }
 
-Row _textFieldExtraWeatherDetail() {
-  return Row(
+Container _textFieldExtraWeatherDetail() {
+  return Container(
+    margin: EdgeInsets.symmetric(horizontal: 50),
+      child: Row(
     mainAxisAlignment: MainAxisAlignment.spaceAround,
     children: [
       Column(
@@ -227,6 +231,233 @@ Row _textFieldExtraWeatherDetail() {
         ],
       ),
     ],
+  ));
+}
+
+Container _horizontalListViewName() {
+  return Container(
+    margin: const EdgeInsets.only(top: 70),
+    child: Text(
+      "7-DAY WEATHER FORECAST",
+      style: TextStyle(color: Colors.white, fontSize: 16),
+    ),
+  );
+}
+
+Container _horizontalListView() {
+  return Container(
+    margin: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 5),
+    padding: const EdgeInsets.all(5),
+    height: 140.0,
+    child: ListView(
+      // This next line does the trick.
+      scrollDirection: Axis.horizontal,
+      children: <Widget>[
+        Container(
+          width: 160.0,
+          color: Color.fromARGB(102, 255, 255, 255),
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+          margin: EdgeInsets.symmetric(horizontal: 4),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "Friday",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    "6 ºF",
+                    style: TextStyle(fontSize: 26, color: Colors.white),
+                  ),
+                  Icon(
+                    Icons.wb_sunny,
+                    color: Colors.white,
+                    size: 47,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+        Container(
+          width: 160.0,
+          color: Color.fromARGB(102, 255, 255, 255),
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+          margin: EdgeInsets.symmetric(horizontal: 4),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "Saturday",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    "5 ºF",
+                    style: TextStyle(fontSize: 26, color: Colors.white),
+                  ),
+                  Icon(
+                    Icons.wb_sunny,
+                    color: Colors.white,
+                    size: 47,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+        Container(
+          width: 160.0,
+          color: Color.fromARGB(102, 255, 255, 255),
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+          margin: EdgeInsets.symmetric(horizontal: 4),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "Sunday",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    "22 ºF",
+                    style: TextStyle(fontSize: 26, color: Colors.white),
+                  ),
+                  Icon(
+                    Icons.wb_sunny,
+                    color: Colors.white,
+                    size: 47,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+        Container(
+          width: 160.0,
+          color: Color.fromARGB(102, 255, 255, 255),
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+          margin: EdgeInsets.symmetric(horizontal: 4),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "Monday",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    "24 ºF",
+                    style: TextStyle(fontSize: 26, color: Colors.white),
+                  ),
+                  Icon(
+                    Icons.wb_sunny,
+                    color: Colors.white,
+                    size: 47,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+        Container(
+          width: 160.0,
+          color: Color.fromARGB(102, 255, 255, 255),
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+          margin: EdgeInsets.symmetric(horizontal: 4),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "Tuesday",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    "21 ºF",
+                    style: TextStyle(fontSize: 26, color: Colors.white),
+                  ),
+                  Icon(
+                    Icons.wb_sunny,
+                    color: Colors.white,
+                    size: 47,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+        Container(
+          width: 160.0,
+          color: Color.fromARGB(102, 255, 255, 255),
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+          margin: EdgeInsets.symmetric(horizontal: 4),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "Wednesday",
+                style: TextStyle(fontSize: 20, color: Colors.white),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    "18 ºF",
+                    style: TextStyle(fontSize: 26, color: Colors.white),
+                  ),
+                  Icon(
+                    Icons.wb_sunny,
+                    color: Colors.white,
+                    size: 47,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+        Container(
+          width: 160.0,
+          color: Color.fromARGB(102, 255, 255, 255),
+          padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
+          margin: EdgeInsets.symmetric(horizontal: 4),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: [
+              Text(
+                "Thursday",
+                style: TextStyle(fontSize: 25, color: Colors.white),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Text(
+                    "17 ºF",
+                    style: TextStyle(fontSize: 26, color: Colors.white),
+                  ),
+                  Icon(
+                    Icons.wb_sunny,
+                    color: Colors.white,
+                    size: 47,
+                  )
+                ],
+              )
+            ],
+          ),
+        ),
+      ],
+    ),
   );
 }
 
